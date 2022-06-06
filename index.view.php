@@ -38,10 +38,13 @@
       <div class="modal-content">
         <div class="modal-header">
           <button type="button" class="close" data-dismiss="modal">&times;</button>
-          <h4 class="modal-title"><?= $veg->name;?><?=</h4>
+          <h4 class="modal-title">  <?= $veg->name;?></h4>
         </div>
         <div class="modal-body">
-          <p>This is a large modal.</p>
+          <img  src="images/<?= $veg->name;?>.jpg" alt="<?= $veg->name;?>" style ="width:50%">
+          <p><strong>Days to Maturity:<?= $veg->name;?></strong></p>
+          <p><strong>Harvest Window:</strong><?= $veg->dtm;?></p>
+          <p><strong>Sowing Dates:</strong><?= $veg->sowingDates;?></p>
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
