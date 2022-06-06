@@ -1,66 +1,49 @@
  
+ DROP DATABASE IF EXISTS veggies;
  CREATE DATABASE veggies;
- USE DATABASE;
- 
+ USE veggies;
  CREATE TABLE details(
-   name          VARCHAR(32) NOT NULL PRIMARY KEY,
-   dtm           INTEGER  NOT NULL,
-   harvestwindow INTEGER  NOT NULL,
-  sowingDates   VARCHAR(22)
+    id INTEGER AUTO_INCREMENT PRIMARY KEY,
+    name          VARCHAR(32) NOT NULL,
+    dtm           INTEGER  NOT NULL,
+    harvestwindow INTEGER  NOT NULL,
+    sowingDates   VARCHAR(22)
 );
  
- INSERT INTO details(name,dtm,harvestwindow,sowingDates) VALUES ('arugula',28,14,'Feb. 1st - Mar. 30th');
- INSERT INTO details(name,dtm,harvestwindow,sowingDates) VALUES ('baby-kale',30,14,'Feb. 15th - Jun. 30th');
- INSERT INTO details(name,dtm,harvestwindow,sowingDates) VALUES ('baby-mustard',30,14,'Feb. 15th - Jun. 30th');
- INSERT INTO details(name,dtm,harvestwindow,sowingDates) VALUES ('basil',70,14,'May 1st - Jul. 30th');
- INSERT INTO details(name,dtm,harvestwindow,sowingDates) VALUES ('beets',70,20,'Mar. 1st - Apr. 15th');
- INSERT INTO details(name,dtm,harvestwindow,sowingDates) VALUES ('beans',50,21,'Apr. 1st - Sept. 30th');
- INSERT INTO details(name,dtm,harvestwindow,sowingDates) VALUES ('Beans (Pole)',60,60,'Apr. 1st - Sept. 30th');
- INSERT INTO details(name,dtm,harvestwindow,sowingDates) VALUES ('broccoli',85,14,'Feb. 15th - Apr. 15th');
- INSERT INTO details(name,dtm,harvestwindow,sowingDates) VALUES ('brussel-sprouts',120,21,'Jul. 15th - Sept. 15th');
- INSERT INTO details(name,dtm,harvestwindow,sowingDates) VALUES ('carrots',55,20,'Feb. 1st - Mar. 30th');
- INSERT INTO details(name,dtm,harvestwindow,sowingDates) VALUES ('Cabbage-Chinese',80,14,'Mar. 15th - Mar. 30th');
- INSERT INTO details(name,dtm,harvestwindow,sowingDates) VALUES ('Cabbage-Storage',95,14,'Feb. 1st - Apr. 15th');
- INSERT INTO details(name,dtm,harvestwindow,sowingDates) VALUES ('Cabbage-Savoy',75,14,'Feb. 1st - Apr. 15th');
+ INSERT INTO details(name,dtm,harvestwindow,sowingDates) VALUES ('Arugula',28,14,'Feb. 1st - Mar. 30th');
+ INSERT INTO details(name,dtm,harvestwindow,sowingDates) VALUES ('Baby-kale',30,14,'Feb. 15th - Jun. 30th');
+ INSERT INTO details(name,dtm,harvestwindow,sowingDates) VALUES ('Baby-mustard',30,14,'Feb. 15th - Jun. 30th');
+ INSERT INTO details(name,dtm,harvestwindow,sowingDates) VALUES ('Basil',70,14,'May 1st - Jul. 30th');
+ INSERT INTO details(name,dtm,harvestwindow,sowingDates) VALUES ('Beans',50,21,'Apr. 1st - Sept. 30th');
+ INSERT INTO details(name,dtm,harvestwindow,sowingDates) VALUES ('Broccoli',85,14,'Feb. 15th - Apr. 15th');
+ INSERT INTO details(name,dtm,harvestwindow,sowingDates) VALUES ('Carrots',55,20,'Feb. 1st - Mar. 30th');
  INSERT INTO details(name,dtm,harvestwindow,sowingDates) VALUES ('Cabbage-Summer',80,14,'Jul. 15th - Sept. 15th');
- INSERT INTO details(name,dtm,harvestwindow,sowingDates) VALUES ('Cauliflower / Romanesco',110,14,'Feb. 15th - Apr. 15th');
- INSERT INTO details(name,dtm,harvestwindow,sowingDates) VALUES ('celery-root',120,14,'Feb. 15th - Mar. 30th');
- INSERT INTO details(name,dtm,harvestwindow,sowingDates) VALUES ('Celery Root - Mini',80,14,'Feb. 15th - Mar. 30th');
- INSERT INTO details(name,dtm,harvestwindow,sowingDates) VALUES ('coriander',55,14,'Feb. 1st - Mar. 30th');
- INSERT INTO details(name,dtm,harvestwindow,sowingDates) VALUES ('Cucumber - English (Greenhouse)',55,45,'Apr. 15th - Aug. 15th');
- INSERT INTO details(name,dtm,harvestwindow,sowingDates) VALUES ('Cucumber - Libanese (Greenhouse)',55,45,'Apr. 15th - Aug. 15th');
+ INSERT INTO details(name,dtm,harvestwindow,sowingDates) VALUES ('Celery-root',120,14,'Feb. 15th - Mar. 30th');
+ INSERT INTO details(name,dtm,harvestwindow,sowingDates) VALUES ('Coriander',55,14,'Feb. 1st - Mar. 30th');
+ INSERT INTO details(name,dtm,harvestwindow,sowingDates) VALUES ('Cucumber',55,45,'Apr. 15th - Aug. 15th');
  INSERT INTO details(name,dtm,harvestwindow,sowingDates) VALUES ('Dill',50,14,'Mar. 15th - Mar. 30th');
- INSERT INTO details(name,dtm,harvestwindow,sowingDates) VALUES ('eggplant',90,72,'Apr. 15th - Jun. 15th');
- INSERT INTO details(name,dtm,harvestwindow,sowingDates) VALUES ('fennel',60,14,'Mar. 1st - Apr. 30th');
- INSERT INTO details(name,dtm,harvestwindow,sowingDates) VALUES ('frisée',67,14,NULL);
- INSERT INTO details(name,dtm,harvestwindow,sowingDates) VALUES ('garlic',255,14,'Sept. 15th - Nov. 30th');
- INSERT INTO details(name,dtm,harvestwindow,sowingDates) VALUES ('green-onion',70,14,'Feb. 1st - Mar. 30th');
- INSERT INTO details(name,dtm,harvestwindow,sowingDates) VALUES ('kale',85,98,'Feb. 15th - Jun. 30th');
- INSERT INTO details(name,dtm,harvestwindow,sowingDates) VALUES ('kohlrabi',70,14,'Feb. 15th - Jul. 30th');
- INSERT INTO details(name,dtm,harvestwindow,sowingDates) VALUES ('leek',130,21,'Feb. 15th - Jul. 30th');
- INSERT INTO details(name,dtm,harvestwindow,sowingDates) VALUES ('Leek Storage',180,21,'Feb. 15th - Jul. 30th');
- INSERT INTO details(name,dtm,harvestwindow,sowingDates) VALUES ('lettuce',48,14,'Feb. 1st - Apr. 30th');
- INSERT INTO details(name,dtm,harvestwindow,sowingDates) VALUES ('Melons-Cantalope',76,21,'Apr. 15th - Jul. 15th');
+ INSERT INTO details(name,dtm,harvestwindow,sowingDates) VALUES ('Eggplant',90,72,'Apr. 15th - Jun. 15th');
+ INSERT INTO details(name,dtm,harvestwindow,sowingDates) VALUES ('Fennel',60,14,'Mar. 1st - Apr. 30th');
+ INSERT INTO details(name,dtm,harvestwindow,sowingDates) VALUES ('Garlic',255,14,'Sept. 15th - Nov. 30th');
+ INSERT INTO details(name,dtm,harvestwindow,sowingDates) VALUES ('Green-onion',70,14,'Feb. 1st - Mar. 30th');
+ INSERT INTO details(name,dtm,harvestwindow,sowingDates) VALUES ('Kale',85,98,'Feb. 15th - Jun. 30th');
+ INSERT INTO details(name,dtm,harvestwindow,sowingDates) VALUES ('Kohlrabi',70,14,'Feb. 15th - Jul. 30th');
+ INSERT INTO details(name,dtm,harvestwindow,sowingDates) VALUES ('Lettuce',48,14,'Feb. 1st - Apr. 30th');
+ INSERT INTO details(name,dtm,harvestwindow,sowingDates) VALUES ('Cantalope',76,21,'Apr. 15th - Jul. 15th');
  INSERT INTO details(name,dtm,harvestwindow,sowingDates) VALUES ('Watermelon',76,21,'Apr. 15th - Jun. 30th');
- INSERT INTO details(name,dtm,harvestwindow,sowingDates) VALUES ('mesclun',60,27,'Feb. 1st - Apr. 30th');
- INSERT INTO details(name,dtm,harvestwindow,sowingDates) VALUES ('onion',118,12,'Aug. 1st - Mar. 30th');
- INSERT INTO details(name,dtm,harvestwindow,sowingDates) VALUES ('Onion - Fresh',80,14,'Aug. 1st - Mar. 30th');
- INSERT INTO details(name,dtm,harvestwindow,sowingDates) VALUES ('pak-choi',50,14,'Mar. 15th - Mar. 30th');
- INSERT INTO details(name,dtm,harvestwindow,sowingDates) VALUES ('peas',60,21,'Jan. 1st - Apr. 15th');
- INSERT INTO details(name,dtm,harvestwindow,sowingDates) VALUES ('peppers',120,60,'Apr. 15th - Jul. 15th');
- INSERT INTO details(name,dtm,harvestwindow,sowingDates) VALUES ('peppers',100,15,'Apr. 15th - Jul. 15th');
- INSERT INTO details(name,dtm,harvestwindow,sowingDates) VALUES ('radish',30,14,'Feb. 1st - Jun. 30th');
- INSERT INTO details(name,dtm,harvestwindow,sowingDates) VALUES ('rapini',60,14,NULL);
- INSERT INTO details(name,dtm,harvestwindow,sowingDates) VALUES ('rutabaga',95,21,'Feb. 1st - Apr. 15th');
- INSERT INTO details(name,dtm,harvestwindow,sowingDates) VALUES ('spinach',55,28,'Feb. 15th - Jun. 30th');
- INSERT INTO details(name,dtm,harvestwindow,sowingDates) VALUES ('Spinach DS',55,28,'Feb. 15th - Jun. 30th');
- INSERT INTO details(name,dtm,harvestwindow,sowingDates) VALUES ('sucrine',50,14,NULL);
- INSERT INTO details(name,dtm,harvestwindow,sowingDates) VALUES ('summer-squash',50,42,'Apr. 1st - Aug. 15th');
- INSERT INTO details(name,dtm,harvestwindow,sowingDates) VALUES ('swiss-chard',65,84,'Mar. 1st - Apr. 30th');
- INSERT INTO details(name,dtm,harvestwindow,sowingDates) VALUES ('cherry-tomato',145,180,'Apr. 15th - Jul. 15th');
- INSERT INTO details(name,dtm,harvestwindow,sowingDates) VALUES ('heirloom-tomato',145,180,'Apr. 15th - Jul. 15th');
- INSERT INTO details(name,dtm,harvestwindow,sowingDates) VALUES ('Tomato - (Field)',115,42,'Apr. 15th - Jul. 15th');
- INSERT INTO details(name,dtm,harvestwindow,sowingDates) VALUES ('Turnip - Hakurei',35,14,'Feb. 1st - Jun. 30th');
- INSERT INTO details(name,dtm,harvestwindow,sowingDates) VALUES ('Winter Radish',70,21,'Feb. 1st - Jun. 30th');
- INSERT INTO details(name,dtm,harvestwindow,sowingDates) VALUES ('Winter Squash',105,21,'Apr. 15th - Jul. 15th');
+ INSERT INTO details(name,dtm,harvestwindow,sowingDates) VALUES ('Onion',118,12,'Aug. 1st - Mar. 30th');
+ INSERT INTO details(name,dtm,harvestwindow,sowingDates) VALUES ('Pak-choi',50,14,'Mar. 15th - Mar. 30th');
+ INSERT INTO details(name,dtm,harvestwindow,sowingDates) VALUES ('Peas',60,21,'Jan. 1st - Apr. 15th');
+ INSERT INTO details(name,dtm,harvestwindow,sowingDates) VALUES ('Peppers',120,60,'Apr. 15th - Jul. 15th');
+ INSERT INTO details(name,dtm,harvestwindow,sowingDates) VALUES ('Radish',30,14,'Feb. 1st - Jun. 30th');
+ INSERT INTO details(name,dtm,harvestwindow,sowingDates) VALUES ('Rapini',60,14,NULL);
+ INSERT INTO details(name,dtm,harvestwindow,sowingDates) VALUES ('Rutabaga',95,21,'Feb. 1st - Apr. 15th');
+ INSERT INTO details(name,dtm,harvestwindow,sowingDates) VALUES ('Spinach',55,28,'Feb. 15th - Jun. 30th');
+ INSERT INTO details(name,dtm,harvestwindow,sowingDates) VALUES ('Summer-squash',50,42,'Apr. 1st - Aug. 15th');
+ INSERT INTO details(name,dtm,harvestwindow,sowingDates) VALUES ('Swiss-chard',65,84,'Mar. 1st - Apr. 30th');
+ INSERT INTO details(name,dtm,harvestwindow,sowingDates) VALUES ('Cherry-tomato',145,180,'Apr. 15th - Jul. 15th');
+ INSERT INTO details(name,dtm,harvestwindow,sowingDates) VALUES ('Tomato',145,180,'Apr. 15th - Jul. 15th');
+ INSERT INTO details(name,dtm,harvestwindow,sowingDates) VALUES ('Turnip',35,14,'Feb. 1st - Jun. 30th');
+ INSERT INTO details(name,dtm,harvestwindow,sowingDates) VALUES ('Winter-radish',70,21,'Feb. 1st - Jun. 30th');
+ INSERT INTO details(name,dtm,harvestwindow,sowingDates) VALUES ('Winter-squash',105,21,'Apr. 15th - Jul. 15th');
  
