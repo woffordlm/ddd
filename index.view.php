@@ -30,10 +30,8 @@
         <?php endforeach; ?>
     </main>
 
-
-
-  <!-- Modal -->
-  <div class="modal fade" id="myModal" role="dialog">
+<!-- Modal -->
+<div class="modal fade" id="myModal" role="dialog">
     <div class="modal-dialog modal-lg">
       <div class="modal-content">
         <div class="modal-header">
@@ -53,6 +51,8 @@
     </div>
   </div>
 </div>
+
+  
 
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
