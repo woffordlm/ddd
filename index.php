@@ -1,9 +1,12 @@
 <?php
-
+// require 'function.php';
+$query = require "bootstrap.php";
+// require 'database/Connection.php';
 require 'Vegetable.php';
-require 'functions.php';
+// require 'database/QueryBuilder.php';
 
-$pdo = connectToDb();
-$selectedVeggies = fetchAllVegetables($pdo);
+
+$selectedVeggies= $query->selectAll('details');
+
+// $selectedVeggies = $query->selectAll('details');
 require 'index.view.php';
-
