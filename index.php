@@ -1,12 +1,15 @@
 <?php
 // require 'function.php';
-$query = require "bootstrap.php";
-// require 'database/Connection.php';
-require 'Vegetable.php';
-// require 'database/QueryBuilder.php';
+$query = require "core/bootstrap.php";
+
+// require 'Vegetable.php';
 
 
-$selectedVeggies= $query->selectAll('details');
 
-// $selectedVeggies = $query->selectAll('details');
-require 'index.view.php';
+
+// $uri = trim($_SERVER['REQUEST_URI'],"/");
+
+
+require Router::load('routes.php')
+
+     ->direct(Request::uri());
