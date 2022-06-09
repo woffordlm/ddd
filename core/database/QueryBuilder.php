@@ -17,4 +17,12 @@ class QueryBuilder
         $statement ->execute();
         return $statement->fetchAll(PDO::FETCH_CLASS);
     }
+    public function selectOne($table, $params)
+    {
+        $statement = $this->pdo->prepare("select * from {$table} where name='{$params}'");
+        
+        $statement ->execute();
+       
+        return $statement->fetchAll(PDO::FETCH_CLASS);
+    }
 }

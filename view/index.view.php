@@ -13,25 +13,27 @@
 </head>
 
 <body>
-    <header>
-        <img id="logo" src= "images/SBC.svg">
-        <h3>Vegetable Profiles</h3>
-    </header>
+   <?php require ('partials/nav.php');?>
+    <h3>Vegetable Profiles</h3>
     <main id = "main" class ="main">
         <?php foreach ($selectedVeggies as $veg): ?>
-            <div name= "<?= $veg->name;?>" class="parent"  >
+          <form action="/names" method="POST">
+            <input value="<?= $veg->name;?>" style = "display:none" name="name">
+            <button type="submit"  class="parent"  >
                 <div class="pic-title">
-                   <strong> <?= $veg->name;?> </strong>
+                   <strong> <?= $veg->name;?> </strong>      
                 </div> 
                 <div  class="child">
-                    <img data-toggle="modal" data-target="#myModal"  name = "<?=$veg->name;?>" src="images/<?= $veg->name;?>.jpg" alt="<?= $veg->name;?>">
+                    <img name = "<?=$veg->name;?>" src="images/<?= $veg->name;?>.jpg" alt="<?= $veg->name;?>">
                 </div>
-            </div>
+          </button>
+            </form>  
+           
         <?php endforeach; ?>
     </main>
 
 <!-- Modal -->
-<div class="modal fade" id="myModal" role="dialog">
+ <div class="modal fade" id="myModal" role="dialog">
     <div class="modal-dialog modal-lg">
       <div class="modal-content">
         <div class="modal-header">
@@ -50,7 +52,7 @@
       </div>
     </div>
   </div>
-</div>
+</div> -->
 
   
 
