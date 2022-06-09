@@ -9,7 +9,6 @@ class QueryBuilder
     {
         $this->pdo = $pdo;
     }
-    
     public function selectAll ($table)
     
     {

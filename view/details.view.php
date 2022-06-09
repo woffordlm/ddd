@@ -28,7 +28,7 @@
   
   <div class="card-body">
     <img id=card-image name = "<?=$veggies->name;?>" src="images/<?= $veggies->name;?>.jpg" alt="<?= $veggies->name;?>">
-    <h5 class="card-title"><?=$veggies->name;?></h5>
+    <h5 class="card-title"><?=$veggies->name;?></h5>   
     <h3 class="card-text">Days to Maturity: <?=$veggies->dtm;?> days</h3>
     <h3 class="card-text">Harvest Window: <?=$veggies->harvestwindow;?> days</h3>
     <h3 class="card-text">Sowing Dates:<?=$veggies->sowingDates;?></h3> 
