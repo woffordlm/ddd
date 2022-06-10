@@ -1,14 +1,11 @@
  <?php 
 
-class Vegetable { 
+class Details { 
     public $name;
     public $dtm;
     public $harvestwindow;
     public $sowingDates;
-    public function vegInfo()
-    {
-        return $this->name;
-    }
+    
     
       function __construct($name, $dtm, $harvestwindow, $sowingDates) {
         
