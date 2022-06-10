@@ -15,15 +15,6 @@
             <img id="logo" src= "images/SBC.svg">
         </a> 
     </header>
-    <!-- <div id="card">
-        <h4> <?=$veggies->name;?></h4>
-        <img id=card-image name = "<?=$veggies->name;?>" src="images/<?= $veggies->name;?>.jpg" alt="<?= $veggies->name;?>">
-        <div id = "text-container">
-            <h5><strong>Days to Maturity:</strong> <?=$veggies->dtm;?></h5>
-            <h5><strong>Harvest Window:</strong> <?=$veggies->harvestwindow;?></h5>
-            <h5><strong>Sowing Dates:</strong> <?=$veggies->sowingDates;?></h5> 
-        </div>
-    </div> -->
     <div class="card text-center">
   
   <div class="card-body">

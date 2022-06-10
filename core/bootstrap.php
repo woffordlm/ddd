@@ -1,6 +1,6 @@
 <?php
     $app = [];
-    $app{'config'} = require 'config.php';
+    $app['config'] = require 'config.php';
     require 'core/Router.php';
     require 'database/connection.php';
     require 'database/QueryBuilder.php';
